@@ -205,14 +205,14 @@
               </div>
 
               <input type="text" id="name" placeholder="Your Name" required>
-              <input type="email" id="email" placeholder="Your Pesan" required>
+              <input type="email" id="email" placeholder="Your text" required>
               <button type="button" onclick="sendWhatsApp()">Send Request</button>
             </form>
             
             <script>
               function sendWhatsApp() {
                 var name = document.getElementById("name").value;
-                var email = document.getElementById("email").value;
+                var email = document.getElementById("text").value;
             
                 // Mengambil semua checkbox yang dicentang
                 var selectedOptions = [];
@@ -228,7 +228,7 @@
                 }
             
                 var message = "Name: " + encodeURIComponent(name) + "%0A"
-                            + "Pesan: " + encodeURIComponent(Pesan) + "%0A"
+                            + "Pesan: " + encodeURIComponent(text) + "%0A"
                             + "Selected: " + encodeURIComponent(selectedOptions.join(", "));
             
                 var url = "https://wa.me/6281336638507?text=" + message;
