@@ -205,7 +205,7 @@
               </div>
 
               <input type="text" id="name" placeholder="Your Name" required>
-              <input type="email" id="email" placeholder="Your Email" required>
+              <input type="email" id="email" placeholder="Your Pesan" required>
               <button type="button" onclick="sendWhatsApp()">Send Request</button>
             </form>
             
@@ -228,8 +228,8 @@
                 }
             
                 var message = "Name: " + encodeURIComponent(name) + "%0A"
-                            + "Email: " + encodeURIComponent(email) + "%0A"
-                            + "Selected Services: " + encodeURIComponent(selectedOptions.join(", "));
+                            + "Pesan: " + encodeURIComponent(Pesan) + "%0A"
+                            + "Selected: " + encodeURIComponent(selectedOptions.join(", "));
             
                 var url = "https://wa.me/6281336638507?text=" + message;
             
