@@ -255,9 +255,24 @@
                     <label for="email">Email</label>
                   </div>
                 </div>
-                <a href="https://wa.me/6281336638507?text=Halo, saya ingin melakukan request." target="_blank">
-                <input type="submit" value="Send Request">
+              <form id="requestForm">
+                  <input type="text" id="name" placeholder="Your Name" required>
+                  <input type="email" id="email" placeholder="Your Email" required>
+                  <button type="button" onclick="sendWhatsApp()">Send Request</button>
               </form>
+
+              <script>
+                function sendWhatsApp() {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+
+                var url = "https://wa.me/6281236368907?text=" 
+                          + "Name: " + encodeURIComponent(name) + "%0A"
+                          + "Email: " + encodeURIComponent(email);
+
+                window.open(url, "_blank");
+              }
+            </script>
             </div>
           </li>
         </ul>
