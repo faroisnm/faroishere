@@ -62,15 +62,15 @@
               <div class="intro--options">
                 <a href="#0">
                   <h3>Business Management</h3>
-                  <p>saya merupakan lulusan S1 Manajemen Bisnis dari UIN Surakarta.</p>
+                  <p>You are a graduate with a Bachelor's degree in Business Management from UIN Surakarta.</p>
                 </a>
                 <a href="#0">
                   <h3>IT Support</h3>
-                  <p>Saya pernah mengikuti pelatihan dan mendapatkan sertifikasi Profesi Junior Technical Support di BLK Karanganyar.</p>
+                  <p>You have attended training and received a Junior Technical Support Professional certification from BLK Karanganyar..</p>
                 </a>
                 <a href="#0">
                   <h3>Editing &amp; Design</h3>
-                  <p>Saya merupakan lulusan Multimedia dari MAN 1 Karanganyar dengan sertifikasi Multimedia.</p>
+                  <p>You are a graduate of Multimedia from MAN 1 Karanganyar with a Multimedia certification.</p>
                 </a>
               </div>
             </div>
@@ -204,7 +204,7 @@
               </div>
             
               <input type="text" id="name" placeholder="Your Name" required>
-              <input type="email" id="email" placeholder="Your Email" required>
+              <input type="email" id="email" placeholder="Your Text" required>
               <button type="button" onclick="sendWhatsApp()">🚀 Send Request</button>
             </form>
             
@@ -266,7 +266,7 @@
                 }
             
                 var message = "Name: " + encodeURIComponent(name) + "%0A"
-                            + "Email: " + encodeURIComponent(email) + "%0A"
+                            + "Email: " + encodeURIComponent(text) + "%0A"
                             + "Selected Services: " + encodeURIComponent(selectedOptions.join(", "));
             
                 var url = "https://wa.me/6281336638507?text=" + message;
