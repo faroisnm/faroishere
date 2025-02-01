@@ -245,16 +245,6 @@
                     </label>
                   </span>
                 </div>
-                <div class="work-request--information">
-                  <div class="information-name">
-                    <input id="name" type="text" spellcheck="false">
-                    <label for="name">Name</label>
-                  </div>
-                  <div class="information-email">
-                    <input id="email" type="email" spellcheck="false">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
               <form id="requestForm">
                   <input type="text" id="name" placeholder="Your Name" required>
                   <input type="email" id="email" placeholder="Your Email" required>
@@ -266,7 +256,7 @@
                 var name = document.getElementById("name").value;
                 var email = document.getElementById("email").value;
 
-                var url = "https://wa.me/6281236368907?text=" 
+                var url = "https://wa.me/6281336368907?text=" 
                           + "Name: " + encodeURIComponent(name) + "%0A"
                           + "Email: " + encodeURIComponent(email);
 
