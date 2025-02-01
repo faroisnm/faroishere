@@ -176,8 +176,8 @@
           </li>
           <li class="l-section section">
             <div class="hire">
-                         <h2>You want us to do</h2>
-            <!-- checkout formspree.io for easy form setup -->
+                                     <h2>You want us to do</h2>
+            
             <form class="work-request" id="requestForm">
               <div class="work-request--options">
                 <span class="options-a">
@@ -201,18 +201,56 @@
                   <input id="opt-6" type="checkbox" value="Marketing">
                   <label for="opt-6">Just Ask</label>
                 </span>
-                
               </div>
-
+            
               <input type="text" id="name" placeholder="Your Name" required>
-              <input type="email" id="email" placeholder="Your text" required>
-              <button type="button" onclick="sendWhatsApp()">Send Request</button>
+              <input type="email" id="email" placeholder="Your Email" required>
+              <button type="button" onclick="sendWhatsApp()">🚀 Send Request</button>
             </form>
+            
+            <style>
+              /* Styling untuk input */
+              input[type="text"], input[type="email"] {
+                width: 100%;
+                padding: 12px;
+                margin: 10px 0;
+                border: 2px solid #007bff;
+                border-radius: 5px;
+                font-size: 16px;
+                color: #333;
+                background-color: #f8f9fa;
+                transition: 0.3s;
+              }
+            
+              input[type="text"]:focus, input[type="email"]:focus {
+                border-color: #0056b3;
+                outline: none;
+                box-shadow: 0px 0px 8px rgba(0, 91, 187, 0.5);
+              }
+            
+              /* Styling untuk tombol */
+              button {
+                width: 100%;
+                padding: 12px;
+                background: linear-gradient(45deg, #007bff, #0056b3);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: 0.3s;
+              }
+            
+              button:hover {
+                background: linear-gradient(45deg, #0056b3, #003f7f);
+                transform: scale(1.05);
+              }
+            </style>
             
             <script>
               function sendWhatsApp() {
                 var name = document.getElementById("name").value;
-                var email = document.getElementById("text").value;
+                var email = document.getElementById("email").value;
             
                 // Mengambil semua checkbox yang dicentang
                 var selectedOptions = [];
@@ -228,8 +266,8 @@
                 }
             
                 var message = "Name: " + encodeURIComponent(name) + "%0A"
-                            + "Pesan: " + encodeURIComponent(text) + "%0A"
-                            + "Selected: " + encodeURIComponent(selectedOptions.join(", "));
+                            + "Email: " + encodeURIComponent(email) + "%0A"
+                            + "Selected Services: " + encodeURIComponent(selectedOptions.join(", "));
             
                 var url = "https://wa.me/6281336638507?text=" + message;
             
