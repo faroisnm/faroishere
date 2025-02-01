@@ -176,65 +176,62 @@
           </li>
           <li class="l-section section">
             <div class="hire">
-             <h2>You want us to do</h2>
-<!-- checkout formspree.io for easy form setup -->
-<form class="work-request" id="requestForm">
-  <div class="work-request--options">
-    <span class="options-a">
-      <input id="opt-1" type="checkbox" value="Video Editing">
-      <label for="opt-1">Video Editing</label>
-
-      <input id="opt-2" type="checkbox" value="Graphic Design">
-      <label for="opt-2">Graphic Design</label>
-
-      <input id="opt-3" type="checkbox" value="Motion Design">
-      <label for="opt-3">Join Community</label>
-    </span>
-    
-    <span class="options-b">
-      <input id="opt-4" type="checkbox" value="UX Design">
-      <label for="opt-4">Marketing</label>
-
-      <input id="opt-5" type="checkbox" value="Web Design">
-      <label for="opt-5">Portfolio Website</label>
-
-      <input id="opt-6" type="checkbox" value="Marketing">
-      <label for="opt-6">Just Ask</label>
-    </span>
-  </div>
-
-  <input type="text" id="name" placeholder="Your Name" required>
-  <input type="email" id="email" placeholder="Your Email" required>
-  <button type="button" onclick="sendWhatsApp()">Send Request</button>
-</form>
-
-<script>
-  function sendWhatsApp() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-
-    // Mengambil semua checkbox yang dicentang
-    var selectedOptions = [];
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    checkboxes.forEach((checkbox) => {
-      selectedOptions.push(checkbox.value);
-    });
-
-    // Jika tidak ada checkbox yang dicentang, tampilkan pesan peringatan
-    if (selectedOptions.length === 0) {
-      alert("Please select at least one option.");
-      return;
-    }
-
-    var message = "Name: " + encodeURIComponent(name) + "%0A"
-                + "Email: " + encodeURIComponent(email) + "%0A"
-                + "Selected Services: " + encodeURIComponent(selectedOptions.join(", "));
-
-    var url = "https://wa.me/6281336638507?text=" + message;
-
-    window.open(url, "_blank");
-  }
-</script>
+                         <h2>You want us to do</h2>
+            <!-- checkout formspree.io for easy form setup -->
+            <form class="work-request" id="requestForm">
+              <div class="work-request--options">
+                <span class="options-a">
+                  <input id="opt-1" type="checkbox" value="Video Editing">
+                  <label for="opt-1">Video Editing</label>
+            
+                  <input id="opt-2" type="checkbox" value="Graphic Design">
+                  <label for="opt-2">Graphic Design</label>
+            
+                  <input id="opt-3" type="checkbox" value="Motion Design">
+                  <label for="opt-3">Join Community</label>
+                </span>
+                
+                <span class="options-b">
+                  <input id="opt-4" type="checkbox" value="UX Design">
+                  <label for="opt-4">Marketing</label>
+            
+                  <input id="opt-5" type="checkbox" value="Web Design">
+                  <label for="opt-5">Portfolio Website</label>
+            
+                  <input id="opt-6" type="checkbox" value="Marketing">
+                  <label for="opt-6">Just Ask</label>
+                </span>
+              </div>
+            
+              <input type="text" id="name" placeholder="Your Name" required>
+              <input type="email" id="email" placeholder="Your Email" required>
+              <button type="button" onclick="sendWhatsApp()">Send Request</button>
+            </form>
+            
+            <script>
+              function sendWhatsApp() {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+            
+                // Mengambil semua checkbox yang dicentang
+                var selectedOptions = [];
+                var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+                checkboxes.forEach((checkbox) => {
+                  selectedOptions.push(checkbox.value);
+                });
+            
+                // Jika tidak ada checkbox yang dicentang, tampilkan pesan peringatan
+                if (selectedOptions.length === 0) {
+                  alert("Please select at least one option.");
+                  return;
+                }
+            
+                var message = "Name: " + encodeURIComponent(name) + "%0A"
+                            + "Email: " + encodeURIComponent(email) + "%0A"
+                            + "Selected Services: " + encodeURIComponent(selectedOptions.join(", "));
+            
+                var url = "https://wa.me/6281336638507?text=" + message;
+            
                 window.open(url, "_blank");
               }
             </script>
