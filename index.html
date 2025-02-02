@@ -261,16 +261,14 @@
             
                 // Jika tidak ada checkbox yang dicentang, tampilkan pesan peringatan
                 if (selectedOptions.length === 0) {
-                  alert("Please select at least one option.");
+                  alert("pilihen salah siji kocak.");
                   return;
                 }
             
                 var message = "Name: " + encodeURIComponent(name) + "%0A"
                             + "Email: " + encodeURIComponent(text) + "%0A"
                             + "Selected Services: " + encodeURIComponent(selectedOptions.join(", "));
-            
                 var url = "https://wa.me/6281336638507?text=" + message;
-            
                 window.open(url, "_blank");
               }
             </script>
